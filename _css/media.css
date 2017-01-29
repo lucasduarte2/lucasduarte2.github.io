@@ -1,0 +1,38 @@
+@charset "utf-8";
+div#tv-radio {
+	/*largura*/
+	width: 900px;
+	/*altura*/
+	height: 580px;
+	/*pra ficar centralizado na minha div*/
+	margin: auto;
+	/*imagem de fundo*/
+	background: url("../_imagens/radio-tv.png") no-repeat;
+	/*background-repeat: no-repeat;﻿ se usa isso agora*/
+}
+
+audio#musica {
+	/*para ser exibido como um bloco*/
+	display: block;
+	/*posicionamento*/
+	position: relative;
+	/*aumentando a largura*/
+	left: 575px;
+	/*aumentando a altura*/
+	top: 500px;
+	/*largura de todos os lados do play de audio*/
+	width: 300px;
+}
+
+video#video {
+	/*para ser exibido como um bloco*/
+	display: block;
+	/*posicionamento*/
+	position: relative;
+	/*aumentando a largura*/
+	left: 90px;
+	/*aumentando a altura*/
+	top: 85px;
+	/*largura de todos os lados do play de video*/
+	width: 440px;
+}

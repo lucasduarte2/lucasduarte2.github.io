@@ -1,0 +1,351 @@
+@charset "utf-8";
+
+@fonte-face {
+	/*nome para o estilo de letra q vou criar*/
+	font-family: 'FonteLogo';
+	/*Fonte aonde se encontra o estilo*/
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+body {
+	/*estilo de todas as palavras q estam dentro da teg body*/
+	font-family: Arial, sans-serif;
+	/*o 1 do color: rgba(0,0,0,1) serve para transparencia do texto q vai de 0 ate 1*/
+	background-color: #dddddd;
+	color: rgba(0,0,0,1);
+
+}
+/*em uma div com o ID=interface*/
+div#interface{
+	/*o div vai ficar restrito a 400 pixes no meu site*/
+	width: 1200px;
+	/*faz com q eu tenha uma interface com o fundo branco*/
+	background-color: #ffffff;
+	/*serve para alterar a margem do bloco div, na ordem: cima, direita, baixo e esquerda, aumentando ou dimunuindo a margem*/
+	margin: -20px 10px 0px 60px;
+	/*o primeiro 0px e o deslocamento lateral, o segundo é o 
+	deslocamento vertical e o terceiro e o espalhamento
+	é o rgba é a cor da sombra */
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	/*"padding" cria um espaço maior entre a borda do objeto, nesse caso o conteudo q ta dentro do div na ordem: cima, direita, baixo e esquerda, aumentando ou dimunuindo a margem*/
+	padding: 10px 10px 10px 10px;
+}
+p {
+	/*faz q quando a janela diminua o texto fique alinhado de forma a n sobrar espaços quando tiver no limite da janela*/
+	text-align: justify;
+		/*faz q todo começo de paragrafo tenha um espaço determinado*/
+	text-indent: 50px;
+}
+
+a {
+	color: #606060;
+	/*"text-decoration: none;" faz q eu tire a linha q tinha embaixo das palavras dos links*/
+	text-decoration: none;
+}
+a:hover {
+	/*faz q quando eu passe o mause nos links eles aparecam uma linha enbaixo do link*/
+	text-decoration: underline;
+}
+
+/*em um header com o ID=cabecalho e dentro dele uma teg img com o id=icone*/
+header#cabecalho img#icone {
+	position: absolute;
+	top: 70px;
+	left: 1110px;
+}
+/*em um header com o ID=cabecalho*/
+header#cabecalho {
+	/*cria uma linha dividindo o q tem no header*/
+	border-bottom: 1px #606060 solid;
+	/*define o tamanho da linha*/
+	height: 150px;
+	/*adiciona uma imagem no cabeçalho header*/
+	/*no-repeat vai fazer q a imagem n repita*/
+	/*0px deslocamento lateral e 80px é deslocamento vertical*/
+	background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+header#cabecalho h1 {
+	/*cria um tipo de fonte para a palavra */
+	font-family: 'FonteLogo', cursive;
+	/*tamanho da fonte*/
+	font-size: 30px;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	/*"padding" cria um espaço maior entre a borda do objeto*/
+	padding: 0px;
+	/*faz q a margem de baixa de h1 do header seja 0*/
+	margin-bottom: 0px;
+}
+header#cabecalho h2 {
+	font-family:Arial, sans-serif;
+	/*tamanho da fonte*/
+	font-size: 15pt;
+	color: #888888;
+	/*"padding" cria um espaço maior entre a borda do objeto*/
+	padding: 0px;
+	/*faz q a margem de cima de h1 do header seja 0*/
+	margin-top: 0px;
+}
+
+/* Formatação de imagens*/
+.foto-legenda {
+	
+	/*"position: relative" isso é, ele vai ficar no lugar relativo ao codigo html
+	onde ele foi colocado no html, e dentro dele o figcaption
+	vai ter uma posição absoluta dentro de seu pai q é o figure e vai ficar na posição 0*/
+	position: relative;
+	border: 8px solid white;
+	/*o primeiro 1px e o deslocamento lateral, o segundo é o 
+	deslocamento vertical e o terceiro e o espalhamento
+	é o blak é a cor da sombra */
+	box-shadow: 1px 1px 4px black
+}
+.foto-legenda img {
+	/*width é largura da imagem*/
+	width: 100%;
+	/*height é altura*/
+	height: 100%;
+}
+.foto-legenda figcaption {
+	/*"opacity" é o quanto de opaco eu quero no meu background-color:*/
+	opacity: 0;
+	/*isto é, ele vai ter uma posição absoluta dentro do seu conteiner
+	q no caso é a borda branca*/
+	position: absolute;
+	top: 0px;
+	/*o 0.4 do color: rgba(0,0,0,0.4) serve para transparencia do texto q vai de 0 ate 1*/
+	background-color: rgba(0,0,0,0.4);
+	color: white;
+	/*width é largura da imagem*/
+	width: 100%;
+	/*height é altura*/
+	height: 100%;
+	/*"padding" cria um espaço maior entre a borda da imagem e o titulo*/
+	padding: 10px;
+	/*"box-sizing: border-box;" corrige o problema do padding
+	criando um box dentro da borda*/
+	box-sizing: border-box;
+	/*"transition: opacity 1s;" serve para a transição de quando o mause passar na imagem para mostrar o titulo da mesma*/
+	transition: opacity 1s;
+}
+/*esse bloco faz com q apareça o titulo na imagem quando passar o mause em cima da imagem*/
+.foto-legenda:hover figcaption{
+	opacity: 1;
+}
+
+nav {
+	/*"display: block;" serve para q o menu flutue na pagina, e para isso é preciso fazer q o navegador menu seja exibido como bloco*/
+	display: block;
+	
+}
+
+/*Formatação do Menu*/
+nav ul{
+	/*"list-style: none;" retira os marcadores da minha lista, tando das ul quando ol*/
+	list-style: none;
+	/*"text-transform: uppercase;" coloca todas as palavras em maiusculas*/
+	text-transform: uppercase;
+	/*para q apenas a minha lista flutue pela tela, logo eu coloco uma posição absoluta q faz eu poder flutuar por toda a pagina enquando relativa faz q eu flutue apenas pelo conteiner*/
+	position: absolute;
+	/*"top" faz q eu suba para o topo da pagina*/
+	top: -20px;
+	/*"left" faz q eu va horizontalmente na pagina*/
+	left: 620px;
+}
+nav li {
+	/*"display: inline-block;" faz com q um bloco seja exibido em uma linha, ficando horizontalmente*/
+	display: inline-block;
+	background-color: #dddddd;
+	/*"padding: 10px;" controla o espado dentro do objeto, ou palavra nesse caso, dando o efeito de um botão*/
+	padding: 10px;
+	/*"margin: 2px" controla o espado fora do objeto, ou palavra nesse caso, fazendo q aumente o espaço de uma palavra para a outra nesse caso*/
+	margin: 2px;
+	/*"transition: background-color 1s;" serve para a transição de quando o mause passar no menu para escurecer o titulo da mesma*/
+	transition: background-color 1s;
+}
+/*esse bloco faz com q apareça mais cinza o menu quando passar o mause em cima das opções*/
+nav li:hover {
+	background-color: #606060;
+}
+/*isso é para fazer sumir a parte do Menu Principal, mas ele continua sewndo visivel pros mecanismo de busca dentro do meu item de navegação como identificação Menu Principal como titulo principal*/
+nav h1 {
+	display: none;
+}
+nav a {
+	/* faz q as palavras tenho essa cor especifica*/
+	color: #000000;
+	/*"text-decoration: none;" faz q eu tire a linha q tinha embaixo das opcoes do menu*/
+	text-decoration: none;
+}
+/*faz com que eu mude a cor do link do menu quando passa o mause por cima*/
+nav a:hover {
+	color: #ffffff;
+	/*faz q crie uma linha embaixo da palavras das opções do menu quando passa o mause */
+	text-decoration: underline;
+
+}
+/*em uma section com o ID=corpo*/
+section#corpo {
+	/*faz q seja mostrada como um bloco*/
+	display: block;
+	/*difine a largura dela*/
+	width: 600px;
+	/*faz q a section com id corpo flutue pelo lado esquerdo*/
+	float: left;
+	/*"border-right"cria uma linha do lado direito, 1px define a largura da linha,
+	solid como é essa linha, q pode ser de diferentes tipos, e a cor por ultimo*/
+	border-right: 1px solid #606060; 
+	/*"padding-right"configura a distancia do texto para a linha, isto do lado direito*/
+	padding-right: 15px;
+}
+
+article#noticia-principal h2{
+	/*tamanho da fonte*/
+	font-size: 13pt;
+	color: #606060;
+	/*faz com q eu tenha uma interface com o fundo branco*/
+	background-color: #dddddd;
+	/*"padding" cria um espaço maior entre a borda do objeto, seguindo a ordem: cima, direita, baixo e esquerda, aumentando ou dimunuindo a margem*/
+	padding: 5px 0px 5px 10px;
+	/*"margin: 10px 0px 10px 0px" controla o espado fora do objeto, ou palavra nesse caso, fazendo q aumente o espaço de uma palavra para a outra nesse caso, seguindo a ordem: cima, direita, baixo e esquerda, aumentando ou dimunuindo a margem*/
+	margin: 10px 0px 10px 0px;
+
+}
+
+header#cabecalho-artigo h1 {
+	/*cria um tipo de fonte para a palavra*/
+	font-family: 'FonteLogo', cursive;
+	/*tamanho da fonte*/
+	font-size: 20pt;
+	color: #606060;
+	/*faz q eu diminua ou aumente a margem da base*/
+	margin-bottom: 0px;
+	/*faz q eu diminua ou aumente a margem do topo*/
+	margin-top: 0px;
+}
+header#cabecalho-artigo h2 {
+	/*tamanho da fonte*/
+	font-size: 13pt;
+	color: #cecece;
+	/*faz com q eu tenha uma interface com o fundo branco*/
+	background-color: #ffffff;
+	/*"margin: 10px" controla o espado fora do objeto, em todos os lados nesse caso*/
+	margin: 0px;
+}
+header#cabecalho-artigo h3 {
+	/*tamanho da fonte*/
+	font-size: 12pt;
+	color: #606060;
+}
+
+.direita {
+	/*alinha o texo na posição direita*/
+	text-align: right;
+}
+
+table#tabelaSpec {
+	/*"border"cria uma linha em todos os lados da tabela nesse caso, 1px define a largura da linha,
+	solid como é essa linha, q pode ser de diferentes tipos, e a cor por ultimo*/
+	border: 1px solid #606060;
+	/*"border-spacing:"vai da o espaço entre as celulas*/
+	border-spacing: 0px;
+	/*atualiza automaticamente para a esquerda*/
+	margin-left: auto;
+	/*atualiza automaticamente para a direita*/
+	margin-right: auto;
+
+}
+table#tabelaSpec td {
+	/*"border"cria uma linha em todos os lados da tabela nesse caso, 1px define a largura da linha,
+	solid como é essa linha, q pode ser de diferentes tipos, e a cor por ultimo*/
+	border: 1px solid #606060;
+	/*configura o espaço interno de todos os objetos*/
+	padding: 10px;
+	/*alina tudo da tabela ao centro*/
+	text-align: center;
+}
+table#tabelaSpec td.ce {
+	/*cor da fonte*/
+	color: #ffffff;
+	/*cor do fundo*/
+	background-color: #606060;
+	/*faz com q as palavas da celula fiquem no topo de suas respectivas celulas*/
+	vertical-align: top;
+	/*faz com q as palavras fiquem em negrito*/
+	font-weight: bold;
+}
+
+table#tabelaSpec td.cd {
+	/*cor do fundo*/
+	background-color: #cecece;
+}
+table#tabelaSpec caption {
+	color: #888888;
+	/*tamanho da fonte/ palavras*/
+	font-size: 13pt;
+	/*faz com q as palavras fiquem em negrito*/
+	font-weight: bold;
+}
+table#tabelaSpec caption span {
+	/*vai se desconectar do texto, vai ser mostrado como um bloco flutuante*/
+	display: block;
+	/*flutuação a direita*/
+	float: right;
+	/*cor da fonte*/
+	color: #000000;
+	/*tamanho da fonte/ palavras*/
+	font-size: 8pt;
+	/*aumentei o topo para q ficasse coloca na tabela a palvra, mas poderia diminuir a base para 0 tambem q ia da certo*/
+	margin-top: 10px;
+}
+
+aside#lateral {
+	/*faz q seja mostrada como um bloco*/
+	display: block;
+	/*difine a largura dela*/
+	width: 562px;
+	/*faz q a aside com id lateral flutue pelo lado direito*/
+	float: right;
+	/*cor do fundo*/
+	background-color: #dddddd;
+	/*"padding" cria um espaço maior entre a borda do objeto, seguindo a ordem: cima, direita, baixo e esquerda, aumentando ou dimunuindo a margem*/
+	padding: 5px 0px 5px 10px;
+	/*aumentei o topo para q ficasse coloca a palvra, mas poderia diminuir a base para 0 tambem q ia da certo*/
+	margin-top: 10px;
+	/*o primeiro 2px e o deslocamento lateral, o segundo é o 
+	deslocamento vertical e o terceiro e o espalhamento
+	é o blak é a cor da sombra */
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+
+}
+
+aside#lateral h1{
+	/*cria um tipo de fonte para a palavra*/
+	font-family: 'FonteLogo', cursive;
+	/*tamanho da fonte*/
+	font-size: 20pt;
+	color: #606060;
+	/*aumentei o topo para q ficasse coloca a palavra*/
+	margin-top: 0px;
+
+
+}
+aside#lateral h2{
+	/*cor do fundo*/
+	background-color: #606060;
+	/*tamanho da fonte*/
+	font-size: 13pt;
+	color: #ffffff;
+	/*configura o espaço interno de todos os objetos*/
+	padding: 5px;
+}
+
+footer#rodaPe {
+	/*limpa as configurações do aside e section*/
+	clear: both;
+	/*"border-top"cria uma linha do lado de cima, 1px define a largura da linha,
+	solid como é essa linha, q pode ser de diferentes tipos, e a cor por ultimo*/
+	border-top: 1px solid #606060;
+}
+footer#rodaPe p {
+	text-align: center;
+}

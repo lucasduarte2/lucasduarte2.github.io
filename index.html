@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	<meta charset="utf-8">
+		<title>Tudo sobre Google Glass</title>
+		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+	</head>
+	<!--chamando o arquivo de JavaScript-->
+	<script type="text/javascript" src="_javascript/funcoes.js"></script>
+
+	<body>
+		<div id="interface">
+		<!--"hgroup" serve para agrupar titulos que fazem parte de um mesmo grupo-->
+			<header id="cabecalho">
+				<hgroup>
+					<!--titulo--><h1>Google Glass</h1>
+					<!--sub-titulo--><h2>A revolução do Google está chegando</h2>
+				</hgroup>
+				<!--"src" é o caminho para a imagem-->
+				<img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+				<!--"nav" cria uma area de navegação no meu site, fazendo o menu ficar um do lado do outro-->
+				<nav>
+					<h1>Menu Principal</h1>
+					<!--"ol" cria uma lista ordenada já "ul" cria uma lista n ordenada, logo n mostra a numeração-->
+					<!--"type" pode ser 1, a, A, i, I q são os tipos de numeração possiveis, e "start" é a pocisão q eu quero q a numeração comece sendo sempre como um inteiro, em uma "ul" o "type" pode ser "square", "circle" ou "disc"-->
+					<ul type="dics">
+					<!--"li" é os itens da lista-->
+						<!--onmouseover faz q quando eu passe o mause ele mude a imagem e onmouseout faz com q quando eu retire o mause ele volte para a imagem q eu quiser-->
+						<li onmouseover="mudaFoto('home')" onmouseout="mudaFoto('glass-oculos-preto-peq')"><a href="index.html">Home</a></li>
+					 	<li onmouseover="mudaFoto('especificacoes')" onmouseout="mudaFoto('glass-oculos-preto-peq')"><a href="specs.html">Especificações</a></li>
+					 	<li onmouseover="mudaFoto('fotos')" onmouseout="mudaFoto('glass-oculos-preto-peq')"><a href="fotos.html">Fotos</a></li>
+					 	<li onmouseover="mudaFoto('multimidia')" onmouseout="mudaFoto('glass-oculos-preto-peq')"><a href="multimidia.html">Multimídia</a></li>
+					 		<!--eu possi criar uma lista dentro de uma lista, ex:
+					 		<ul>
+					 			<li> Musica </li>
+					 			<li> video </li>
+					 		</ul>
+					 		isso cria uma lista em multimidia
+					 		-->
+					 	<li onmouseover="mudaFoto('contato')" onmouseout="mudaFoto('glass-oculos-preto-peq')"><a href="fale-conosco.html">Fale conosco</a></li>
+					</ul>
+				</nav>
+				
+		</header>
+		<!--"section" cria uma seção
+		A tag section é utilizada para marcar as seções de conteúdo de uma página-->
+		<section id="corpo">
+		<!--O Google e outros sistemas de busca não tem com saberem onde fica o bloco do texto principal do site. Não havia nenhuma indicação dizendo que determinado elemento é se trata do bloco que carrega a informação principal do site. O article surgiu para suprir essa necessidade.-->
+			<article id="noticia-principal">
+			<!--"header" é pra criar cabecalho-->
+				<header id="cabecalho-artigo">
+					<!-- Dentro do header é possível inserir um elemento hgroup que tem como função agrupar dois ou mais elementos h1 até ,h6 organizando-os em uma hierarquia de títulos e subtítulos.-->
+					<hgroup>
+					<!--"&nbsp;" serve para colocar um espaço-->
+						<h3>Tecnologia > &nbsp; Inovações</h3>
+						<h1>Saiba tudo sobre o Google Glass</h1>
+						<h2>por Lucas Duarte</h2>
+						<h3 class="direita">Atualizado em 20/Janeiro/2017</h3>
+					</hgroup>
+				</header>
+				<h2>O que é</h2>
+				<!--"&shy;" serve para quando diminuir a janela a palavra quebrar usando um '-' para continuar a palavra-->
+				<!--"target="_blank" serve para abrir outra janela com o link em vez de abrir na mesma pagina-->
+				<p>O <b>Google Glass</b> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="https://www.google.com/glass/start" target="_blank"><i>Project Glass</i></a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeo&shy;conferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.
+				</p>
+				<!--"figure" é utilizado para colocar imagens e dar um significado semantico a elas, então toda a imagem q fizer parte de um conteudo vai ser colocado nessa teg-->
+				<figure class="foto-legenda">
+					<img src="_imagens/glass-quadro-homem-mulher.jpg">
+					<!--"figcaption" tudo o q tiver dentro dessa teg pode ser uma legenda, quando vc faz uma busca por imagem em um buscador, ele vai avaliar o conteudo, facilitando a busca da imagem do site pelo buscador -->
+					<figcaption>
+						<h2>Google Glass</h2>
+						<h3>Uma nova maneira de ver o mundo</h3>
+					</figcaption>
+				</figure>
+
+				<h2>Data de lançamento</h2>
+				<p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.
+				</p>
+
+				<h2>Especificações Técnicas</h2>
+				<!--"table" cria uma tabela-->
+				<table id="tabelaSpec">
+					<!--"caption" cria um nome para tabela-->
+					<caption>Tabela Técnica do Google Glass <span>Mar/2013</span></caption>
+					<!--"tr" cria uma linha na tabela-->
+					<!--"td" cria as celulas da tabela/ divide o conteudo em pedaços-->
+				
+					<tr><td class="ce">Tela</td><td class="cd">Resolução equivalente a tela de 25"</td></tr>
+					<!--"rowspan="2"" faz q a celula ocupe mais de uma coluna, nesse caso 2 colunas-->
+					<!--"colspan="2"" faz q a celula ocupe mais de um espaço horizontalmente, nesse caos 2 espaços de linha horizontal-->
+					<tr><td rowspan="2" class="ce">Camera</td><td class="cd"> 5MP para fotos</td></tr>
+					<tr><td class="cd">720p para vídeos</td></tr>
+					<tr><td rowspan="2" class="ce">Conectividade</td><td class="cd"> Wi-Fi</td></tr>
+					<tr><td class="cd">Bluetooth</td></tr>
+					<tr><td class="ce">Memória Interna</td><td class="cd"> 12GB</td></tr>
+				</table>
+
+				<h2>Como funciona</h2>
+				<p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça
+				</p>
+
+				<h2>O que você pode fazer com o Google Glasses</h2>
+				<!--"wbr" serve para o navegador poder quebrar a palavra quando diminuir a janela-->
+				<p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-<wbr/>humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.
+				</p>
+
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Vb2uojqKvFM" frameborder="0" allowfullscreen></iframe>
+			</article>
+		</section>
+		<aside id="lateral">
+			<h1>Outras Notícias</h1>
+			<h2>Vídeo mais recente</h2>
+
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/MrdoImidSKE" frameborder="0" allowfullscreen></iframe>
+			
+			<h2>Novidades no Glass</h2>
+			<p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.
+			</p>
+
+			<p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.
+			</p>
+		</aside>
+		
+		<footer id="rodaPe">
+			<p>Copyright &copy; 2013 - by Lucas Duarte <br/>
+			<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+			</p>
+		</footer>
+			
+		</div>
+
+	</body>
+</html>

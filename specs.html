@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	<meta charset="utf-8">
+		<title>Tudo sobre Google Glass</title>
+		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="_css/specs.css">
+	</head>
+	<!--chamando o arquivo de JavaScript-->
+	<script type="text/javascript" src="_javascript/funcoes.js"></script>
+
+	<body>
+		<div id="interface">
+		<!--"hgroup" serve para agrupar titulos que fazem parte de um mesmo grupo-->
+			<header id="cabecalho">
+				<hgroup>
+					<!--titulo--><h1>Google Glass</h1>
+					<!--sub-titulo--><h2>A revolução do Google está chegando</h2>
+				</hgroup>
+				<!--"src" é o caminho para a imagem-->
+				<img id="icone" src="_imagens/especificacoes.png">
+				<!--"nav" cria uma area de navegação no meu site, fazendo o menu ficar um do lado do outro-->
+				<nav class="menu">
+					<h1>Menu Principal</h1>
+					<!--"ol" cria uma lista ordenada já "ul" cria uma lista n ordenada, logo n mostra a numeração-->
+					<!--"type" pode ser 1, a, A, i, I q são os tipos de numeração possiveis, e "start" é a pocisão q eu quero q a numeração comece sendo sempre como um inteiro, em uma "ul" o "type" pode ser "square", "circle" ou "disc"-->
+					<ul type="dics">
+					<!--"li" é os itens da lista-->
+						<!--onmouseover faz q quando eu passe o mause ele mude a imagem e onmouseout faz com q quando eu retire o mause ele volte para a imagem q eu quiser-->
+						<li onmouseover="mudaFoto('home')" onmouseout="mudaFoto('especificacoes')"><a href="index.html">Home</a></li>
+					 	<li onmouseover="mudaFoto('especificacoes')" onmouseout="mudaFoto('especificacoes')"><a href="specs.html">Especificações</a></li>
+					 	<li onmouseover="mudaFoto('fotos')" onmouseout="mudaFoto('especificacoes')"><a href="fotos.html">Fotos</a></li>
+					 	<li onmouseover="mudaFoto('multimidia')" onmouseout="mudaFoto('especificacoes')"><a href="multimidia.html">Multimídia</a></li>
+					 		<!--eu possi criar uma lista dentro de uma lista, ex:
+					 		<ul>
+					 			<li> Musica </li>
+					 			<li> video </li>
+					 		</ul>
+					 		isso cria uma lista em multimidia
+					 		-->
+					 	<li onmouseover="mudaFoto('contato')" onmouseout="mudaFoto('especificacoes')"><a href="fale-conosco.html">Fale conosco</a></li>
+					</ul>
+				</nav>
+		</header>
+		<!--"section" cria uma seção
+		A tag section é utilizada para marcar as seções de conteúdo de uma página-->
+		<section id="corpo-full">
+			<!--O Google e outros sistemas de busca não tem com saberem onde fica o bloco do texto principal do site. Não havia nenhuma indicação dizendo que determinado elemento é se trata do bloco que carrega a informação principal do site. O article surgiu para suprir essa necessidade.-->
+			<article id="noticia-principal">
+			<!--"header" é pra criar cabecalho-->
+				<header id="cabecalho-artigo">
+				    <!--Dentro dele é possível inserir um elemento hgroup que tem como função agrupar dois ou mais elementos h1 até ,h6 organizando-os em uma hierarquia de títulos e subtítulos.-->
+					<hgroup>
+					<!--"&nbsp;" serve para colocar um espaço-->
+						<h3>Glass > Especificações</h3>
+						<h1>Raio-X no Google Glass</h1>
+						<h2>por Lucas Duarte</h2>
+						<h3 class="direita">Atualizado em 23/Janeiro/2017</h3>
+					</hgroup>
+				</header>
+
+				<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+				</p>
+				<!--"section" cria uma seção
+				A tag section é utilizada para marcar as seções de conteúdo de uma página-->
+				<section id="conteudo">
+				<!--"map" faz com que eu consiga selecionar um pedaco da imagem para q quando o mause passe por ela seja 
+				possivel ir pra um link. "rect" forma um quadrado, cicle um circulo e "poly" varias formas pegando os pontos sempre no sentido horario. "coords" sao as coordenadas da imagem.
+				"usermap" fala q eu to usando o "map" de nome "#tal". "href" diz para aonde eu serie redrecionado-->
+				<img src="_imagens/glass-esquema-marcado.jpg" usemap="#meuMapa">
+				<!--criando uma mapa para acessar certas areas dele-->
+				<map name="meuMapa">
+				<!--acessando a area-->
+					<!--google-glass.html#tela indica q eu vou abrir esse site no artigo tela, pra isso q se deve usar article, target indica onde eu vou abrir, nesse caso vai ser na propria janela do iframe-->
+					<area shape="poly" coords="181,219,264,207,266,242,184,255" href="google-glass.html#tela" target="janela">
+					<area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela">
+					<area shape="circle" coords="76,51,12" href="google-glass.html#bateria-gadgets" target="janela">
+					<area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" target="janela">
+				</map>
+				<!--A tag <iframe> especifica um quadro embutido.
+				Um quadro embutido é usado para incorporar outro documento dentro do documento HTML atual. Nesse caso a janela da pagina google-glass-->
+					<iframe src="google-glass.html" name="janela" id="frame-specs" ></iframe>
+					
+				</section>
+			</article>
+		</section>
+	
+
+		<footer id="rodaPe">
+			<p>Copyright &copy; 2013 - by Lucas Duarte <br/>
+			<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+			</p>
+		</footer>
+			
+		</div>
+
+	</body>
+</html>

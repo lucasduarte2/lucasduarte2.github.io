@@ -1,0 +1,17 @@
+@charset "utf-8"
+
+section#conteudo {
+	/*largura do conteudo na pagina*/
+	width: 1000px;
+	/*faqz com q o conteudo fique centralizado na tela indepedente do espaço q ele ocupe */
+	margin: auto;
+}
+
+iframe#frame-specs {
+	/*largura do conteudo na pagina, nesse caso da janela*/
+	width: 430px;
+	/*altura do conteudo na pagina, nesse caso da janela*/
+	height: 280px;
+	/*remover a borda,nesse caso da janela*/
+	border: none;
+}

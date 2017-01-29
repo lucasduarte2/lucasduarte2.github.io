@@ -1,0 +1,64 @@
+@charset "utf-8";
+form {
+	/*largura do formulario*/
+	width: 500px;
+	/*margem do formulario*/
+	margin: auto;
+}
+
+input, textarea {
+	/*estilo da fonte*/
+	font-family: sans-serif;
+	/*faz q n fiquem em negrito*/
+	font-weight: normal;
+	/*tamanho da fonte*/
+	font-size: 13px;
+	background-color: rgba(255,255,255,0.6);
+}
+/*quando passar o mause mudar pra isso nos objetos input e do textarea*/
+input:hover, textarea:hover {
+	/*cor q vai ficar as caixa do input e textarea*/
+	background-color: #dddddd;
+}
+legend {
+	color: #888888;
+	/*faz q fiquem em negrito*/
+	font-weight: bold;
+	/*tamanho da fonte*/
+	font-size: 16px;
+	font-family:  sans-serif;
+}
+
+fieldset {
+	/*cor das linhas do formulario*/
+	border-color: #cecece;
+	margin: 20px;
+
+}
+
+fieldset#sexo {
+	width: 150px;
+}
+
+fieldset#usuario {
+	/*o primeiro dos % é a parte lateral e o outro e vertical*/
+	background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco {
+	/*o primeiro dos % é a parte lateral e o outro e vertical*/
+	background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+}
+
+fieldset#usuario {
+	/*o primeiro dos % é a parte lateral e o outro e vertical*/
+	background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+}
+fieldset#mensagem {
+	/*o primeiro dos % é a parte lateral e o outro e vertical*/
+	background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+}
+fieldset#pedido {
+	/*o primeiro dos % é a parte lateral e o outro e vertical*/
+	background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+}

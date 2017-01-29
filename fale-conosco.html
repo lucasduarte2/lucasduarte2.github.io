@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="utf-8">
+        <title>Tudo sobre Google Glass</title>
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+
+    </head>
+    <!--chamando o arquivo de JavaScript-->
+    <script type="text/javascript" src="_javascript/funcoes.js"></script>
+    <script type="text/javascript">
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+        }
+    </script>
+
+    <body>
+        <div id="interface">
+        <!--"hgroup" serve para agrupar titulos que fazem parte de um mesmo grupo-->
+            <header id="cabecalho">
+                <hgroup>
+                    <!--titulo--><h1>Google Glass</h1>
+                    <!--sub-titulo--><h2>A revolução do Google está chegando</h2>
+                </hgroup>
+                <!--"src" é o caminho para a imagem-->
+                <img id="icone" src="_imagens/contato.png">
+                <!--"nav" cria uma area de navegação no meu site, fazendo o menu ficar um do lado do outro-->
+                <nav class="menu">
+                    <h1>Menu Principal</h1>
+                    <!--"ol" cria uma lista ordenada já "ul" cria uma lista n ordenada, logo n mostra a numeração-->
+                    <!--"type" pode ser 1, a, A, i, I q são os tipos de numeração possiveis, e "start" é a pocisão q eu quero q a numeração comece sendo sempre como um inteiro, em uma "ul" o "type" pode ser "square", "circle" ou "disc"-->
+                    <ul type="dics">
+                    <!--"li" é os itens da lista-->
+                        <!--onmouseover faz q quando eu passe o mause ele mude a imagem e onmouseout faz com q quando eu retire o mause ele volte para a imagem q eu quiser-->
+                        <li onmouseover="mudaFoto('home')" onmouseout="mudaFoto('contato')"><a href="index.html">Home</a></li>
+                        <li onmouseover="mudaFoto('especificacoes')" onmouseout="mudaFoto('contato')"><a href="specs.html">Especificações</a></li>
+                        <li onmouseover="mudaFoto('fotos')" onmouseout="mudaFoto('contato')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseover="mudaFoto('multimidia')" onmouseout="mudaFoto('contato')"><a href="multimidia.html">Multimídia</a></li>
+                            <!--eu possi criar uma lista dentro de uma lista, ex:
+                            <ul>
+                                <li> Musica </li>
+                                <li> video </li>
+                            </ul>
+                            isso cria uma lista em multimidia
+                            -->
+                        <li onmouseover="mudaFoto('contato')" onmouseout="mudaFoto('contato')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+                
+        </header>
+        <section id="corpo-full">
+            <!--O Google e outros sistemas de busca não tem com saberem onde fica o bloco do texto principal do site. Não havia nenhuma indicação dizendo que determinado elemento é se trata do bloco que carrega a informação principal do site. O article surgiu para suprir essa necessidade.-->
+            <article id="noticia-principal">
+            <!--"header" é pra criar cabecalho-->
+                <header id="cabecalho-artigo">
+                    <!--Dentro dele é possível inserir um elemento hgroup que tem como função agrupar dois ou mais elementos h1 até ,h6 organizando-os em uma hierarquia de títulos e subtítulos.-->
+                    <hgroup>
+                    <!--"&nbsp;" serve para colocar um espaço-->
+                        <h3> Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Lucas Duarte</h2>
+                        <h3 class="direita">Atualizado em 25/Janeiro/2017</h3>
+                    </hgroup>
+                </header>
+                <!--tudo q tiver nessa teg é o formulario-->
+                <!--method="get" é mais rapido só q n é seguro para enviar dados pessoais por exemplo, já method="post" é mais lento só q é mais seguro-->
+                <!--action é para aonde vai ser enviado os formularios digitados-->
+                <!--oninput="calc_total" quando digitar qualquer procedimento ele vai disparar e começar a fazer a funçao calc_total-->
+                <form method="post" id="fContato" action="mailto:lucasduarte234@gmail.com" oninput="calc_total()">
+                    <!--fieldset é o conguto de campos do formulario-->
+                    <fieldset id="usuario">
+                        <!--legenda para o grupo do formulario-->
+                        <legend>Identificação do Usuário</legend>
+                        <!--input cria uma caixa para digitação-->
+                        <!--size é o tamanho da caixa, maxlength o tanto de caracteres q posso digitar,placeholder é tipo uma dica do q tem q colocar na caixa de texto-->
+                        <!--labem serve para referenciar objetos aos seus id, fazendo q quando eu clique no nome ele já marque na bolinha, sendo isso uma boa pratica de programação-->
+                        <p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/> </p>
+                        <p><label for="cSenha">Senha: </label><input type="password" name="tSenha" id="cSenha" size="9" maxlength="16" placeholder="Senha"/></p>
+                        <p><label for="cMail">E-mail: </label><input type="email" name="tMail" id="cMail" size="16" maxlength="30" placeholder="Email"/></p>
+                        <fieldset id="sexo">
+                            <legend>Sexo: </legend>
+                            <!--labem serve para referenciar objetos aos seus id, fazendo q quando eu clique no nome ele já marque na bolinha-->
+                            <input type="radio" name="tSexo" id="cMasc"/><label for="cMasc">Masculino</label><br/>
+                            <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label>
+                        </fieldset>
+                        <p><label for="cNasc">Data de Nascimento: </label><input type="date" name="tNasc" id="cNasc"/></p>
+                    </fieldset>
+                     <!--fieldset é o conguto de campos do formulario-->
+                    <fieldset id="endereco">
+                        <!--legenda para o grupo do formulario-->
+                        <legend>Endereço do Usuário</legend>
+                        
+                        <p><label for="cRua">Logradouro: </label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua/AV..."/><p>
+                        <p><label for="cNum">Número: </label><input type="number" name="tNum" id="cNum" min="0" max="99999" placeholder="Numero"/><p>
+                        <p><label for="cEst">Estado: </label>
+                        <!--cria seleçõe-->
+                            <select name="tEst" id="cEst">
+                                <!--optgroup faz q eu crie um grupo q contem as opções-->
+                                <optgroup label="Região Suldeste">
+                                    <!--option cria as opções dessa seleção-->
+                                    <!--value envia a sigla pro lugar q eu mandei no action em vez do nome completo dos estados nesse caso-->
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option> 
+                                    <option value="RS">Espirito Santo</option>
+                                </optgroup>
+                                <!--optgroup faz q eu crie um grupo q contem as opções-->
+                                <optgroup label="Regia Sul">
+                                    <!--option cria as opções dessa seleção-->
+                                    <!--value envia a sigla pro lugar q eu mandei no action em vez do nome completo dos estados nesse caso-->
+                                    <option value="PR">Parana</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RG">Rio Grande Do Sul</option>
+                                </optgroup>   
+                            </select>
+                        <p>
+                        <!--list serve para eu colocar as opçoes da datalist para isso eu coloco o valor do id do datalist na list-->
+                        <p><label for="cCid">Cidade: </label><input type="text" name="tCid" id="cCid" size="13" maxlength="40" placeholder="Sua Cidade" list="cidades"><p>
+                        <!--datalist cria opções-->
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Nova Iguaçu"></option>
+                             <option value="Niteroi"></option>
+                              <option value="Belford Roxo"></option>
+                            
+                        </datalist>
+                    </fieldset>
+                    <!--fieldset é o conguto de campos do formulario-->
+                    <fieldset id="mensagem">
+                        <!--legenda para o grupo do formulario-->
+                        <legend>Mensagem do Usuário</legend>
+                       <!--range é um objeto q vc pode arrsta para a direita ou para a esquerda-->
+                       <!-- step é o pulo q quantos ele da quando rolar o botão-->
+                        <p><label for="cUrg">Grau de Urgência: </label>Mín <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="1"> Max<p>
+                        <!--textarea cria uma caixa de digitação maior, cols é o tamanho horizontal da caixa e rows o tamanho vertical-->
+                        <p><label for="cMsg">Mensagem: </label><textarea name="TMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe sua mensagem"></textarea><p>
+                    </fieldset>
+                    <!--fieldset é o conguto de campos do formulario-->
+                    <fieldset id="pedido">
+                        <!--legenda para o grupo do formulario-->
+                        <legend>Quero um Google Glass</legend>
+                        <!--type="checkbox" cria uma coixa de marcação-->
+                        <p><input type="checkbox" name="tPed" id="cPed"> <label for="cPed">Gostaria de adquirir um Google Glass quando disponível </label></p>
+                        <p><label for="cCor">Cor: </label><input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+                        <p><label for="cQtd">Quantidade: </label><input type="number" name="tQtd" id="cQtd" min="0" max="5"></p>
+                        <!--readonly="" faz q n seja possivel digitar no campo de texto-->
+                        <p><label for="cTot">Preço Total: R$ </label><input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly=""></p>
+                    </fieldset>
+                <!--<input type="submit" name="enviar" value="tEnviar"> ou-->
+                <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+                </form>
+                
+            </article>
+        </section>
+        <footer id="rodaPe">
+            <p>Copyright &copy; 2013 - by Lucas Duarte <br/>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            </p>
+        </footer>
+            
+        </div>
+
+    </body>
+</html>

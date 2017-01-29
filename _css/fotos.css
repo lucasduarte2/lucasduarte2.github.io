@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+ul#album-fotos {
+	/*largura*/
+	width: 700px;
+	/*configura a margem da esquerda e automatico para os outros 3 lados*/
+	margin: 0 auto;
+	/*"padding" cria um espaço maior/ uma borda maior*/
+	padding: 50px;
+	overflow: hidden;
+	/*tira os pontinhos da lista*/
+	list-style: none;
+}
+ul#album-fotos li {
+	/*faz q com q os elementos da lista fiquem um do lado do outro pela esquerda*/
+	float: left; 
+	/*largura dos elemetos da lista*/
+	width: 200px;
+	/*altura dos elemetos da lista*/
+	height: 200px;
+	/*cria um espaço entre os elemtos da lista*/
+	margin: 10px;
+	/*cria um dorda de espessura 5px solida de cor por ultimo*/
+	border: 5px solid #ffffff;
+	/*cor dos elementos da lista, no caso do fundo das caixas q foi formada*/
+	background-color: #ffffff;
+	/*sombreamento*/
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+	/*faz q a transição fique melhor quando passar o mause nas imagens, all é o tempo de transição e ease-in é a forma de efeito*/
+	transition: all 0.3s ease-in;
+}
+#album-fotos li span {
+	/*deixa a legenda das fotos mais tramparente*/
+	opacity: 0;
+	color: #ffffff;
+	/*sombreamento*/
+	text-shadow: 1px 1px 1px #000000;
+	/*cor de fundo das legendas das fotos nesse caso*/
+	background-color: rgba(0,0,0,0.3);
+	/*tamanho da legenda das fotos*/
+	font-size: 9px;
+	/*faz com q a legenda das imagens dessa*/
+	line-height: 370px;
+	/*aumenta a largura do fundo das legenda das fotos em todos os lados*/
+	padding: 5px;
+}
+
+/*houver faz q só apareca a foto maior quando eu passar o mause por cima delas*/
+#album-fotos li:hover {
+	/*comando para aumentar as fotos*/
+	transform: scale(1.5);
+}
+/*houver faz q só apareca a legenda das fotos quando eu passar o mause por cima delas*/
+#album-fotos li:hover span {
+	/*deixa a legenda das fotos mais tramparente*/
+	opacity: 1;
+}
+
+
+/*colocar imagem*/
+ul#album-fotos li#foto01 {
+	background: url('../_imagens/galeria-01.jpg');
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 400px 400px;
+	/*cor de fundo das imagens*/
+	background-color: #ffffff; 
+}
+/*houver faz q só apareca a foto completa quando eu passar o mause por cima delas*/
+ul#album-fotos li#foto01:hover {
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 0% 0%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 200px 200px;
+}
+
+/*colocar imagem*/
+ul#album-fotos li#foto02 {
+	background: url('../_imagens/galeria-02.jpg');
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 400px 400px;
+	/*cor de fundo das imagens*/
+	background-color: #ffffff; 
+}
+/*houver faz q só apareca a foto completa quando eu passar o mause por cima delas*/
+ul#album-fotos li#foto02:hover {
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 0% 0%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 200px 200px;
+}
+/*colocar imagem*/
+ul#album-fotos li#foto03 {
+	background: url('../_imagens/galeria-03.jpg');
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 400px 400px;
+	/*cor de fundo das imagens*/
+	background-color: #ffffff; 
+}
+/*houver faz q só apareca a foto completa quando eu passar o mause por cima delas*/
+ul#album-fotos li#foto03:hover {
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 0% 0%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 200px 200px;
+}
+/*colocar imagem*/
+ul#album-fotos li#foto04 {
+	background: url('../_imagens/galeria-04.jpg');
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 400px 400px;
+	/*cor de fundo das imagens*/
+	background-color: #ffffff; 
+}
+/*houver faz q só apareca a foto completa quando eu passar o mause por cima delas*/
+ul#album-fotos li#foto04:hover {
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 0% 0%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 200px 200px;
+}
+/*colocar imagem*/
+ul#album-fotos li#foto05 {
+	background: url('../_imagens/galeria-05.jpg');
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 400px 400px;
+	/*cor de fundo das imagens*/
+	background-color: #ffffff; 
+}
+/*houver faz q só apareca a foto completa quando eu passar o mause por cima delas*/
+ul#album-fotos li#foto05:hover {
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 0% 0%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 200px 200px;
+}
+/*colocar imagem*/
+ul#album-fotos li#foto06 {
+	background: url('../_imagens/galeria-06.jpg');
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 400px 400px;
+	/*cor de fundo das imagens*/
+	background-color: #ffffff; 
+}
+/*houver faz q só apareca a foto completa quando eu passar o mause por cima delas*/
+ul#album-fotos li#foto06:hover {
+	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
+	background-position: 0% 0%;
+	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
+	background-size: 200px 200px;
+}
