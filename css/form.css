@@ -42,23 +42,23 @@ fieldset#sexo {
 
 fieldset#usuario {
 	/*o primeiro dos % é a parte lateral e o outro e vertical*/
-	background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+	background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
 }
 
 fieldset#endereco {
 	/*o primeiro dos % é a parte lateral e o outro e vertical*/
-	background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+	background: url("../imagens/icone-endereco.png") no-repeat 95% 95%;
 }
 
 fieldset#usuario {
 	/*o primeiro dos % é a parte lateral e o outro e vertical*/
-	background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+	background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
 }
 fieldset#mensagem {
 	/*o primeiro dos % é a parte lateral e o outro e vertical*/
-	background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+	background: url("../imagens/icone-mensagem.png") no-repeat 95% 95%;
 }
 fieldset#pedido {
 	/*o primeiro dos % é a parte lateral e o outro e vertical*/
-	background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+	background: url("../imagens/icone-pagamento.png") no-repeat 95% 95%;
 }

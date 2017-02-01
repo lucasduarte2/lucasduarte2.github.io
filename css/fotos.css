@@ -59,7 +59,7 @@ ul#album-fotos li {
 
 /*colocar imagem*/
 ul#album-fotos li#foto01 {
-	background: url('../_imagens/galeria-01.jpg');
+	background: url('../imagens/galeria-01.jpg');
 	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
 	background-position: 50% 50%;
 	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
@@ -77,7 +77,7 @@ ul#album-fotos li#foto01:hover {
 
 /*colocar imagem*/
 ul#album-fotos li#foto02 {
-	background: url('../_imagens/galeria-02.jpg');
+	background: url('../imagens/galeria-02.jpg');
 	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
 	background-position: 50% 50%;
 	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
@@ -94,7 +94,7 @@ ul#album-fotos li#foto02:hover {
 }
 /*colocar imagem*/
 ul#album-fotos li#foto03 {
-	background: url('../_imagens/galeria-03.jpg');
+	background: url('../imagens/galeria-03.jpg');
 	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
 	background-position: 50% 50%;
 	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
@@ -111,7 +111,7 @@ ul#album-fotos li#foto03:hover {
 }
 /*colocar imagem*/
 ul#album-fotos li#foto04 {
-	background: url('../_imagens/galeria-04.jpg');
+	background: url('../imagens/galeria-04.jpg');
 	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
 	background-position: 50% 50%;
 	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
@@ -128,7 +128,7 @@ ul#album-fotos li#foto04:hover {
 }
 /*colocar imagem*/
 ul#album-fotos li#foto05 {
-	background: url('../_imagens/galeria-05.jpg');
+	background: url('../imagens/galeria-05.jpg');
 	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
 	background-position: 50% 50%;
 	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/
@@ -145,7 +145,7 @@ ul#album-fotos li#foto05:hover {
 }
 /*colocar imagem*/
 ul#album-fotos li#foto06 {
-	background: url('../_imagens/galeria-06.jpg');
+	background: url('../imagens/galeria-06.jpg');
 	/*muda o posicionamento da imagem para mostrar o meio da imagen*/
 	background-position: 50% 50%;
 	/*tamanho da imagem de fundo, nesse caso tem q ser o tamanho original das fotos*/

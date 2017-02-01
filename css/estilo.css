@@ -4,7 +4,7 @@
 	/*nome para o estilo de letra q vou criar*/
 	font-family: 'FonteLogo';
 	/*Fonte aonde se encontra o estilo*/
-	src: url("../_fonts/bubblegum-sans-regular.otf");
+	src: url("../fonts/bubblegum-sans-regular.otf");
 }
 body {
 	/*estilo de todas as palavras q estam dentro da teg body*/
@@ -61,7 +61,7 @@ header#cabecalho {
 	/*adiciona uma imagem no cabeçalho header*/
 	/*no-repeat vai fazer q a imagem n repita*/
 	/*0px deslocamento lateral e 80px é deslocamento vertical*/
-	background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+	background: url("../imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
 }
 header#cabecalho h1 {
 	/*cria um tipo de fonte para a palavra */
